@@ -1,31 +1,53 @@
-import React from "react";
-import {
-  Public,
-  Protected,
-  Login,
-  PrivateRoute,
-  AuthButton
-} from "./protected-authentication";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from "react";
+// import {
+//   Public,
+//   Protected,
+//   Login,
+//   PrivateRoute,
+//   AuthButton
+// } from "./protected-authentication";
+import { BrowserRouter as Router, Route, Link, Prompt } from "react-router-dom";
 
-class App extends React.Component {
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <Router>
+//         <div>
+//           <AuthButton />
+//           <ul>
+//             <li>
+//               <Link to="/public"> Public Page</Link>{" "}
+//             </li>
+//             <li>
+//               <Link to="/protected"> Protected Page</Link>{" "}
+//             </li>
+//           </ul>
+
+//           <Route path="/public" component={Public} />
+//           <Route path="/login" component={Login} />
+//           <PrivateRoute path="/protected" component={Protected} />
+//         </div>
+//       </Router>
+//     );
+//   }
+// }
+
+class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <AuthButton />
           <ul>
             <li>
-              <Link to="/public"> Public Page</Link>{" "}
+              <Link to="/">Form</Link>
             </li>
             <li>
-              <Link to="/protected"> Protected Page</Link>{" "}
+              <Link to="/one">One</Link>
+            </li>
+            <li>
+              <Link to="two">Two</Link>
             </li>
           </ul>
-
-          <Route path="/public" component={Public} />
-          <Route path="/login" component={Login} />
-          <PrivateRoute path="/protected" component={Protected} />
         </div>
       </Router>
     );
