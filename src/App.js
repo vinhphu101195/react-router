@@ -7,6 +7,7 @@ import React, { Component } from "react";
 //   AuthButton
 // } from "./protected-authentication";
 import { BrowserRouter as Router, Route, Link, Prompt } from "react-router-dom";
+import { Form } from "./preventing-transitions";
 
 // class App extends React.Component {
 //   render() {
@@ -48,6 +49,10 @@ class App extends Component {
               <Link to="two">Two</Link>
             </li>
           </ul>
+
+          <Route path="/" exact component={Form} />
+          <Route path="/one" render={() => <h3>One</h3>} />
+          <Route path="/two" render={() => <h3>Two</h3>} />
         </div>
       </Router>
     );
