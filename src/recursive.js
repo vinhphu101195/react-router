@@ -7,3 +7,7 @@ const users = [
   { id: 2, name: "Hiep", friends: [0, 1, 3] },
   { id: 3, name: "Quang", friends: [1, 2] }
 ];
+
+const Person = () => {
+  return <div>PERSON</div>;
+};
