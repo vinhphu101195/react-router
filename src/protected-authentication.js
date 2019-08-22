@@ -33,6 +33,7 @@ export class Login extends React.Component {
   };
   render() {
     const { redirectToReferrer } = this.state;
+    // to return the same page before login
     const { from } = this.props.location.state || { from: { pathname: "/" } };
 
     if (redirectToReferrer === true) {
